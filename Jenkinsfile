@@ -56,7 +56,7 @@ node{
       sh  'echo App deployed successfully'
 
     }
-    */
+    
     stage('Send Notifications')
     {
         
@@ -66,5 +66,5 @@ Mithun Technologies.
 ''', cc: 'devopstrainingblr@gmail.com', from: '', replyTo: '', subject: 'Build Done', to: 'devopstrainingblr@gmail.com'
   
     }
-    
+    */
 }
