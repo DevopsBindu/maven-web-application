@@ -6,7 +6,7 @@ node{
     stage('Build'){
         if(isUnix()){
             def mavenhome = tool name: 'M2_HOME', type: 'maven'
-            sh '${mavenhome}/bin/mvn test'
+            sh "${mavenhome}/bin/mvn test"
         }
         else{
             bat 'mvn test'
