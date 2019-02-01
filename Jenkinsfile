@@ -12,7 +12,8 @@ node{
     stage('Run Unit Test cases')
     {
       if(isUnix()){
-       sh  'mvn test'
+          def mavenhome = tool name: 'M2_HOME', type: 'maven'
+          sh  "${mavenhome}/bin/mvn test"
         }
         else{
            bat  'mvn test' 
