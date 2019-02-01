@@ -12,7 +12,7 @@ node('master'){
     stage('Run Unit Test cases')
     {
       if(isUnix()){
-       sh  'mvn test'
+          sh  "${M2_HOME}/bin/mvn test'
         }
         else{
            bat  'mvn test' 
