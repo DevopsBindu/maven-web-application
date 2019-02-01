@@ -5,10 +5,11 @@ node{
     }
     stage('Build'){
         if(isUnix()){
-            sh 'mvn clean package'
+            def mavenhome = tool name: 'M2_HOME', type: 'maven'
+            sh '${mavenhome}/bin/mvn test'
         }
         else{
-            bat 'mvn clean package'
+            bat 'mvn test'
         }
     }
 }
